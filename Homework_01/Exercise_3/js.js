@@ -27,8 +27,23 @@ function btn2() {
 
 function btn3() {
     const obs$ = Observable.create(function (observer) {
-       console.log(observer.next());
+        observer.next("DONE");
+        setTimeout(() => {
+            observer.complete();
+        }, 3000);
     });
+
+    const subsription = obs$.subscribe(
+        function (x) {
+            console.log(`value: ${x}`);
+        },
+        function (rrr) {
+            console.err(err);
+        },
+        function () {
+            console.info(`DONE`);
+        }
+    );
 }
 
 function prom() {
