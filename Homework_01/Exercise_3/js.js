@@ -27,9 +27,9 @@ function btn2() {
 
 function btn3() {
     const obs$ = Observable.create(function (observer) {
-        observer.next("DONE");
+        observer.next("next");
         setTimeout(() => {
-            observer.complete();
+            observer.complete("");
         }, 3000);
     });
 
