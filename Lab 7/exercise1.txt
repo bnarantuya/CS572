@@ -1,0 +1,8 @@
+{
+    _id: objectId(),
+    ISBN : 'number',
+    author : '',
+    tagword : '',
+    holder : '',
+    returnBefore : ''
+}
